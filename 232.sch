@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 6
+Sheet 3 7
 Title ""
 Date ""
 Rev ""
@@ -13,17 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L Interface_UART:MAX232 U3
-U 1 1 5BB41633
-P 4800 2950
-F 0 "U3" H 5200 4150 50  0000 C CNN
-F 1 "MAX232" H 5200 4050 50  0000 C CNN
-F 2 "Package_DIP:DIP-16_W7.62mm_LongPads" H 4850 1900 50  0001 L CNN
-F 3 "http://www.ti.com/lit/ds/symlink/max232.pdf" H 4800 3050 50  0001 C CNN
-	1    4800 2950
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:CP_Small C5
 U 1 1 5BB4183A
@@ -134,4 +123,15 @@ F 3 "" H 4800 4300 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4800 4150 4800 4300
+$Comp
+L Interface_UART:MAX3232 U?
+U 1 1 5E19CDBD
+P 4800 2950
+F 0 "U?" H 4800 4331 50  0000 C CNN
+F 1 "MAX3232" H 4800 4240 50  0000 C CNN
+F 2 "" H 4850 1900 50  0001 L CNN
+F 3 "https://datasheets.maximintegrated.com/en/ds/MAX3222-MAX3241.pdf" H 4800 3050 50  0001 C CNN
+	1    4800 2950
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

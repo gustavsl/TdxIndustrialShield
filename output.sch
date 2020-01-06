@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 6
+Sheet 4 7
 Title ""
 Date ""
 Rev ""
@@ -13,18 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L Isolator:4N25 U4
-U 1 1 5BB42517
-P 4100 2800
-F 0 "U4" H 4100 3125 50  0000 C CNN
-F 1 "4N25" H 4100 3034 50  0000 C CNN
-F 2 "Package_DIP:DIP-6_W7.62mm_LongPads" H 3900 2600 50  0001 L CIN
-F 3 "https://www.vishay.com/docs/83725/4n25.pdf" H 4100 2800 50  0001 L CNN
-	1    4100 2800
-	1    0    0    -1  
-$EndComp
-NoConn ~ 4400 2700
 Text GLabel 4800 3150 2    50   Input ~ 0
 GND_24V
 Wire Wire Line
@@ -114,8 +102,6 @@ Wire Wire Line
 	5250 2600 5250 2750
 Wire Wire Line
 	5250 2750 6050 2750
-Wire Wire Line
-	4400 2800 5050 2800
 $Comp
 L power:+24V #PWR0116
 U 1 1 5BB41712
@@ -155,23 +141,7 @@ Wire Wire Line
 Connection ~ 5250 2150
 Wire Wire Line
 	5250 2150 5000 2150
-Wire Wire Line
-	5250 2750 5050 2750
-Wire Wire Line
-	5050 2750 5050 2800
 Connection ~ 5250 2750
-$Comp
-L Isolator:4N25 U5
-U 1 1 5E1A308E
-P 4100 4400
-F 0 "U5" H 4100 4725 50  0000 C CNN
-F 1 "4N25" H 4100 4634 50  0000 C CNN
-F 2 "Package_DIP:DIP-6_W7.62mm_LongPads" H 3900 4200 50  0001 L CIN
-F 3 "https://www.vishay.com/docs/83725/4n25.pdf" H 4100 4400 50  0001 L CNN
-	1    4100 4400
-	1    0    0    -1  
-$EndComp
-NoConn ~ 4400 4300
 Text GLabel 4800 4750 2    50   Input ~ 0
 GND_24V
 Wire Wire Line
@@ -261,8 +231,6 @@ Wire Wire Line
 	5250 4200 5250 4350
 Wire Wire Line
 	5250 4350 6050 4350
-Wire Wire Line
-	4400 4400 5050 4400
 $Comp
 L power:+24V #PWR0132
 U 1 1 5E1A30C5
@@ -304,7 +272,39 @@ Wire Wire Line
 	5250 3750 5000 3750
 Wire Wire Line
 	5250 4350 5050 4350
-Wire Wire Line
-	5050 4350 5050 4400
 Connection ~ 5250 4350
+$Comp
+L Isolator:LTV-817 U?
+U 1 1 5E1AF440
+P 4100 2800
+F 0 "U?" H 4100 3125 50  0000 C CNN
+F 1 "LTV-817" H 4100 3034 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm" H 3900 2600 50  0001 L CIN
+F 3 "http://www.us.liteon.com/downloads/LTV-817-827-847.PDF" H 4100 2700 50  0001 L CNN
+	1    4100 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 2750 4500 2700
+Wire Wire Line
+	4500 2700 4400 2700
+Wire Wire Line
+	4500 2750 5250 2750
+$Comp
+L Isolator:LTV-817 U?
+U 1 1 5E1B5D3C
+P 4100 4400
+F 0 "U?" H 4100 4725 50  0000 C CNN
+F 1 "LTV-817" H 4100 4634 50  0000 C CNN
+F 2 "Package_DIP:SMDIP-4_W9.53mm" H 3900 4200 50  0001 L CIN
+F 3 "http://www.us.liteon.com/downloads/LTV-817-827-847.PDF" H 4100 4300 50  0001 L CNN
+	1    4100 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 4300 5050 4300
+Wire Wire Line
+	5050 4300 5050 4350
+Text Notes 5750 5000 0    50   ~ 0
+TODO: 4 outs\nTODO: Opto 4 canais LTV-847
 $EndSCHEMATC

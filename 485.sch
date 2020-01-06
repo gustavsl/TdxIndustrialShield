@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 6
+Sheet 2 7
 Title ""
 Date ""
 Rev ""
@@ -105,4 +105,6 @@ F 3 "" H 5500 3300 50  0001 C CNN
 	1    5500 3300
 	1    0    0    -1  
 $EndComp
+Text Notes 5950 3250 0    50   ~ 0
+TODO: resistores de terminação\nTrocar por ST3485
 $EndSCHEMATC

@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 6 6
+Sheet 6 7
 Title ""
 Date ""
 Rev ""
@@ -269,4 +269,8 @@ GPIO4
 Wire Wire Line
 	4500 4150 4850 4150
 Connection ~ 4500 4150
+Text Notes 3200 3000 0    50   ~ 0
+TODO: 4 in
+Text Notes 3200 3100 0    50   ~ 0
+TODO: Optos 4 canais LTV-847
 $EndSCHEMATC
