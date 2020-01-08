@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name tdx-industrial-shield)(type KiCad)(uri /home/daniel/fae/tdx-industrial-shield/tdx-industrial-shield.pretty)(options "")(descr ""))
+)

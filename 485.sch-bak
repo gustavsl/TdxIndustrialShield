@@ -13,17 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L Interface_UART:MAX485E U2
-U 1 1 5BB411C8
-P 5500 2650
-F 0 "U2" H 5750 3200 50  0000 C CNN
-F 1 "MAX485E" H 5750 3100 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_LongPads" H 5500 1950 50  0001 C CNN
-F 3 "https://datasheets.maximintegrated.com/en/ds/MAX1487E-MAX491E.pdf" H 5500 2700 50  0001 C CNN
-	1    5500 2650
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5100 2550 4900 2550
 Wire Wire Line
@@ -107,4 +96,15 @@ F 3 "" H 5500 3300 50  0001 C CNN
 $EndComp
 Text Notes 5950 3250 0    50   ~ 0
 TODO: resistores de terminação\nTrocar por ST3485
+$Comp
+L tdx-industrial-shield:ST3485EIDT U?
+U 1 1 5E159C35
+P 5500 2650
+F 0 "U?" H 5150 3150 50  0000 C CNN
+F 1 "ST3485EIDT" H 5150 3250 50  0000 C CNN
+F 2 "tdx-industrial-shield:SOIC127P600X175-8N" H 5500 1950 50  0001 C CNN
+F 3 "https://br.mouser.com/datasheet/2/389/st3485eb-955264.pdf" H 5500 2700 50  0001 C CNN
+	1    5500 2650
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

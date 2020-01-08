@@ -14,37 +14,33 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Sheet
-S 8700 1850 1700 700 
+S 8700 1750 1700 700 
 U 5BB40725
 F0 "MAX485" 50
 F1 "485.sch" 50
-F2 "UARTB_TX" I L 8700 2050 50 
-F3 "UARTB_RX" I L 8700 2200 50 
-F4 "UARTB_RTS" I L 8700 2350 50 
-F5 "485_A" O R 10400 2100 50 
-F6 "485_B" O R 10400 2200 50 
+F2 "UARTB_TX" I L 8700 1950 50 
+F3 "UARTB_RX" I L 8700 2100 50 
+F4 "UARTB_RTS" I L 8700 2250 50 
+F5 "485_A" O R 10400 2050 50 
+F6 "485_B" O R 10400 2150 50 
 $EndSheet
 $Sheet
-S 8700 850  1700 800 
-U 5BB4156D
-F0 "MAX232" 50
-F1 "232.sch" 50
-F2 "UARTC_TX" I L 8700 1150 50 
-F3 "UARTC_RX" I L 8700 1300 50 
-F4 "RS232_TX" O R 10400 1150 50 
-F5 "RS232_RX" O R 10400 1250 50 
-$EndSheet
-$Sheet
-S 8700 2750 1700 900 
+S 8700 2750 1700 1050
 U 5BB42495
 F0 "output" 50
 F1 "output.sch" 50
-F2 "GPIO1" I L 8700 3100 50 
-F3 "GPIO2" I L 8700 3250 50 
-F4 "Out1A" O R 10400 3000 50 
-F5 "Out1B" O R 10400 3100 50 
-F6 "Out2A" O R 10400 3250 50 
-F7 "Out2B" O R 10400 3350 50 
+F2 "GPIO1" I L 8700 3000 50 
+F3 "GPIO2" I L 8700 3200 50 
+F4 "Out1A" O R 10400 2850 50 
+F5 "Out1B" O R 10400 2950 50 
+F6 "Out2A" O R 10400 3100 50 
+F7 "Out2B" O R 10400 3200 50 
+F8 "Out4B" I R 10400 3700 50 
+F9 "Out4A" I R 10400 3600 50 
+F10 "GPIO4" I L 8700 3600 50 
+F11 "Out3B" I R 10400 3450 50 
+F12 "Out3A" I R 10400 3350 50 
+F13 "GPIO3" I L 8700 3400 50 
 $EndSheet
 $Comp
 L Connector:Screw_Terminal_01x02 J1
@@ -52,8 +48,8 @@ U 1 1 5BB42B20
 P 5100 4300
 F 0 "J1" H 5020 3975 50  0000 C CNN
 F 1 "Screw_Terminal_01x02" H 5020 4066 50  0000 C CNN
-F 2 "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm" H 5100 4300 50  0001 C CNN
-F 3 "~" H 5100 4300 50  0001 C CNN
+F 2 "tdx-industrial-shield:CUI_TB007-508-02BE" H 5100 4300 50  0001 C CNN
+F 3 "https://www.cuidevices.com/product/resource/tb007-508.pdf" H 5100 4300 50  0001 C CNN
 	1    5100 4300
 	-1   0    0    1   
 $EndComp
@@ -106,77 +102,14 @@ Wire Notes Line
 	4600 3700 4600 4800
 Text Notes 6800 4750 0    50   ~ 10
 Overvoltage protection\n
-$Comp
-L Connector:Screw_Terminal_01x02 J8
-U 1 1 5BB4D732
-P 10700 4400
-F 0 "J8" H 10780 4392 50  0000 L CNN
-F 1 "Screw_Terminal_01x02" H 10780 4301 50  0001 L CNN
-F 2 "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm" H 10700 4400 50  0001 C CNN
-F 3 "~" H 10700 4400 50  0001 C CNN
-	1    10700 4400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Screw_Terminal_01x02 J5
-U 1 1 5BB501C1
-P 10700 3000
-F 0 "J5" H 10780 2992 50  0000 L CNN
-F 1 "Screw_Terminal_01x02" H 10780 2901 50  0001 L CNN
-F 2 "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm" H 10700 3000 50  0001 C CNN
-F 3 "~" H 10700 3000 50  0001 C CNN
-	1    10700 3000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Screw_Terminal_01x02 J6
-U 1 1 5BB501F3
-P 10700 3250
-F 0 "J6" H 10780 3242 50  0000 L CNN
-F 1 "Screw_Terminal_01x02" H 10780 3151 50  0001 L CNN
-F 2 "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm" H 10700 3250 50  0001 C CNN
-F 3 "~" H 10700 3250 50  0001 C CNN
-	1    10700 3250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10400 3000 10500 3000
 Wire Wire Line
 	10400 3100 10500 3100
 Wire Wire Line
-	10400 3250 10500 3250
+	10400 3200 10500 3200
 Wire Wire Line
-	10400 3350 10500 3350
-$Comp
-L Connector:Screw_Terminal_01x02 J4
-U 1 1 5BB5E596
-P 10700 2100
-F 0 "J4" H 10780 2092 50  0000 L CNN
-F 1 "Screw_Terminal_01x02" H 10780 2001 50  0001 L CNN
-F 2 "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm" H 10700 2100 50  0001 C CNN
-F 3 "~" H 10700 2100 50  0001 C CNN
-	1    10700 2100
-	1    0    0    -1  
-$EndComp
+	10400 2150 10500 2150
 Wire Wire Line
-	10400 2200 10500 2200
-Wire Wire Line
-	10400 2100 10500 2100
-$Comp
-L Connector:Screw_Terminal_01x02 J3
-U 1 1 5BB5FDD5
-P 10700 1150
-F 0 "J3" H 10780 1142 50  0000 L CNN
-F 1 "Screw_Terminal_01x02" H 10780 1051 50  0001 L CNN
-F 2 "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm" H 10700 1150 50  0001 C CNN
-F 3 "~" H 10700 1150 50  0001 C CNN
-	1    10700 1150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10400 1250 10500 1250
-Wire Wire Line
-	10400 1150 10500 1150
+	10400 2050 10500 2050
 NoConn ~ 6900 1000
 NoConn ~ 6400 1100
 NoConn ~ 6400 1200
@@ -217,22 +150,22 @@ Text GLabel 8600 1300 0    50   Input ~ 0
 UARTC_RX
 Wire Wire Line
 	8600 1300 8700 1300
-Text GLabel 8600 1150 0    50   Input ~ 0
+Text GLabel 8600 1100 0    50   Input ~ 0
 UARTC_TX
 Wire Wire Line
-	8600 1150 8700 1150
-Text GLabel 8600 2200 0    50   Input ~ 0
+	8600 1100 8700 1100
+Text GLabel 8600 2100 0    50   Input ~ 0
 UARTB_RX
 Wire Wire Line
-	8600 2200 8700 2200
-Text GLabel 8600 2050 0    50   Input ~ 0
+	8600 2100 8700 2100
+Text GLabel 8600 1950 0    50   Input ~ 0
 UARTB_TX
 Wire Wire Line
-	8600 2050 8700 2050
-Text GLabel 8600 2350 0    50   Input ~ 0
+	8600 1950 8700 1950
+Text GLabel 8600 2250 0    50   Input ~ 0
 UARTB_RTS
 Wire Wire Line
-	8600 2350 8700 2350
+	8600 2250 8700 2250
 NoConn ~ 6400 2900
 NoConn ~ 6400 3000
 NoConn ~ 6900 3000
@@ -318,64 +251,42 @@ $EndComp
 Wire Wire Line
 	5700 1300 6400 1300
 $Sheet
-S 8700 5050 1700 950 
+S 8700 5250 1700 950 
 U 5BBA5743
 F0 "analog" 50
 F1 "analog.sch" 50
-F2 "0-10_4-20_1_P" I R 10400 5300 50 
-F3 "0-10_4-20_1_N" I R 10400 5400 50 
-F4 "0-10_4-20_2_P" I R 10400 5550 50 
-F5 "0-10_4-20_2_N" I R 10400 5650 50 
-F6 "AIN0" O L 8700 5400 50 
-F7 "AIN1" O L 8700 5550 50 
+F2 "0-10_4-20_1_P" I R 10400 5500 50 
+F3 "0-10_4-20_1_N" I R 10400 5600 50 
+F4 "0-10_4-20_2_P" I R 10400 5750 50 
+F5 "0-10_4-20_2_N" I R 10400 5850 50 
+F6 "AIN0" O L 8700 5600 50 
+F7 "AIN1" O L 8700 5750 50 
 $EndSheet
-$Comp
-L Connector:Screw_Terminal_01x02 J9
-U 1 1 5BB4937C
-P 10700 5300
-F 0 "J9" H 10780 5292 50  0000 L CNN
-F 1 "Screw_Terminal_01x02" H 10780 5201 50  0001 L CNN
-F 2 "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm" H 10700 5300 50  0001 C CNN
-F 3 "~" H 10700 5300 50  0001 C CNN
-	1    10700 5300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Screw_Terminal_01x02 J10
-U 1 1 5BB493C1
-P 10700 5550
-F 0 "J10" H 10780 5542 50  0000 L CNN
-F 1 "Screw_Terminal_01x02" H 10780 5451 50  0001 L CNN
-F 2 "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm" H 10700 5550 50  0001 C CNN
-F 3 "~" H 10700 5550 50  0001 C CNN
-	1    10700 5550
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	10500 5550 10400 5550
+	10500 5750 10400 5750
 Wire Wire Line
-	10400 5650 10500 5650
+	10400 5850 10500 5850
 Wire Wire Line
-	10500 5400 10400 5400
+	10500 5600 10400 5600
 Wire Wire Line
-	10400 5300 10500 5300
-Wire Wire Line
-	10400 4500 10500 4500
-Wire Wire Line
-	10400 4400 10500 4400
-Wire Wire Line
-	10400 4250 10500 4250
+	10400 5500 10500 5500
 $Sheet
-S 8700 3900 1700 950 
+S 8700 4000 1700 1050
 U 5BB45CA4
 F0 "input" 50
 F1 "input.sch" 50
-F2 "GPIO3" O L 8700 4250 50 
-F3 "GPIO4" O L 8700 4400 50 
-F4 "In1_P" I R 10400 4150 50 
-F5 "In1_N" I R 10400 4250 50 
-F6 "In2_P" I R 10400 4400 50 
-F7 "In2_N" I R 10400 4500 50 
+F2 "In1_P" I R 10400 4100 50 
+F3 "In1_N" I R 10400 4200 50 
+F4 "In2_P" I R 10400 4350 50 
+F5 "In2_N" I R 10400 4450 50 
+F6 "GPIO5" O L 8700 4250 50 
+F7 "GPIO6" O L 8700 4450 50 
+F8 "In3_P" I R 10400 4600 50 
+F9 "In3_N" I R 10400 4700 50 
+F10 "GPIO7" O L 8700 4650 50 
+F11 "In4_P" I R 10400 4850 50 
+F12 "In4_N" I R 10400 4950 50 
+F13 "GPIO8" O L 8700 4850 50 
 $EndSheet
 Text GLabel 6350 3300 0    50   Input ~ 0
 AIN0
@@ -387,27 +298,21 @@ Wire Wire Line
 	6900 3300 6950 3300
 NoConn ~ 6900 3400
 NoConn ~ 6400 3400
-Text GLabel 8600 5400 0    50   Input ~ 0
+Text GLabel 8600 5600 0    50   Input ~ 0
 AIN0
 Wire Wire Line
-	8700 5400 8600 5400
-Text GLabel 8600 5550 0    50   Input ~ 0
+	8700 5600 8600 5600
+Text GLabel 8600 5750 0    50   Input ~ 0
 AIN1
 Wire Wire Line
-	8600 5550 8700 5550
-NoConn ~ 6900 1500
-NoConn ~ 6900 1600
+	8600 5750 8700 5750
 NoConn ~ 6900 1700
-NoConn ~ 6400 1700
-NoConn ~ 6400 1600
 Text GLabel 6950 1300 2    50   Input ~ 0
 SODIMM_135
 Wire Wire Line
 	6900 1300 6950 1300
 Text GLabel 6350 1400 0    50   Input ~ 0
 SODIMM_98
-Wire Wire Line
-	6350 1400 6400 1400
 Text GLabel 6950 1400 2    50   Input ~ 0
 SODIMM_133
 Wire Wire Line
@@ -416,35 +321,14 @@ Text GLabel 6350 1500 0    50   Input ~ 0
 SODIMM_103
 Wire Wire Line
 	6350 1500 6400 1500
-Text GLabel 8650 3100 0    50   Input ~ 0
+Text GLabel 8650 3000 0    50   Input ~ 0
 SODIMM_135
-Wire Wire Line
-	8650 3100 8700 3100
-Text GLabel 8650 3250 0    50   Input ~ 0
+Text GLabel 8650 3200 0    50   Input ~ 0
 SODIMM_133
-Wire Wire Line
-	8650 3250 8700 3250
 Text GLabel 8650 4250 0    50   Input ~ 0
 SODIMM_98
-Wire Wire Line
-	8650 4250 8700 4250
-Text GLabel 8650 4400 0    50   Input ~ 0
+Text GLabel 8650 4450 0    50   Input ~ 0
 SODIMM_103
-Wire Wire Line
-	8650 4400 8700 4400
-$Comp
-L Connector:Screw_Terminal_01x02 J7
-U 1 1 5BB4D376
-P 10700 4150
-F 0 "J7" H 10780 4142 50  0000 L CNN
-F 1 "Screw_Terminal_01x02" H 10780 4051 50  0001 L CNN
-F 2 "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm" H 10700 4150 50  0001 C CNN
-F 3 "~" H 10700 4150 50  0001 C CNN
-	1    10700 4150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10500 4150 10400 4150
 Wire Wire Line
 	6350 4000 6650 4000
 $Comp
@@ -453,8 +337,8 @@ U 1 1 5E0EB10E
 P 6650 4250
 F 0 "D3" V 6604 4329 50  0000 L CNN
 F 1 "D_TVS" V 6695 4329 50  0000 L CNN
-F 2 "" H 6650 4250 50  0001 C CNN
-F 3 "~" H 6650 4250 50  0001 C CNN
+F 2 "tdx-industrial-shield:SOT-23" H 6650 4250 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/348/mmbz33val-e-1076995.pdf" H 6650 4250 50  0001 C CNN
 	1    6650 4250
 	0    1    1    0   
 $EndComp
@@ -470,13 +354,13 @@ Industrial Shield \nfor Toradex Viola Carrier Board
 Text Notes 600  2250 0    79   ~ 0
 Features:\n- RS232\n- RS485\n- 2x Analog Input (0-10V or 4-20mA, jumper selection)\n- 4x Digital Input (optocoupler)\n- 4x Digital Output (SSR + optocoupler)\n- 24V input (with 5V regulator to power the board)\n\nDesirable:\n- 74x74mm (same size as Viola)
 $Comp
-L Regulator_Switching:LM2596S-3.3 U1
+L IndustrialShield-cache:LM2596S-5 U1
 U 1 1 5E16CDAE
 P 2850 4250
 F 0 "U1" H 2850 4617 50  0000 C CNN
 F 1 "LM2596S-5.0" H 2850 4526 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:TO-263-5_TabPin3" H 2900 4000 50  0001 L CIN
-F 3 "http://www.ti.com/lit/ds/symlink/lm2596.pdf" H 2850 4250 50  0001 C CNN
+F 2 "tdx-industrial-shield:LM2596SX-5.0" H 2900 4000 50  0001 L CIN
+F 3 "https://www.mouser.com/ProductDetail/Nichicon/UCZ1V471MNQ1MS?qs=sGAEpiMZZMsh%252B1woXyUXj0GguCxVlXHMQRIUynuR3%2FQ%3D" H 2850 4250 50  0001 C CNN
 	1    2850 4250
 	1    0    0    -1  
 $EndComp
@@ -668,7 +552,7 @@ Wire Notes Line
 	4450 3700 4450 5150
 Wire Notes Line
 	1650 3700 1650 5150
-Text Notes 8700 6300 0    50   ~ 10
+Text Notes 8700 6450 0    50   ~ 10
 WARNING: Analog Input is 3.3V, not suitable\nfor the Colibri iMX7, which is 1.8V
 Text Notes 1700 5100 0    50   ~ 0
 Refer to datasheet\nfor layout
@@ -693,34 +577,250 @@ Wire Wire Line
 Text GLabel 5800 5500 0    50   Output ~ 0
 SODIMM_55
 Wire Wire Line
-	5800 5700 5850 5700
+	5800 5800 5850 5800
 Wire Wire Line
 	5800 5500 5850 5500
-$Comp
-L Connector:Screw_Terminal_01x02 J?
-U 1 1 5E1F4FEA
-P 7750 5450
-F 0 "J?" H 7830 5442 50  0000 L CNN
-F 1 "Screw_Terminal_01x02" H 7830 5351 50  0001 L CNN
-F 2 "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm" H 7750 5450 50  0001 C CNN
-F 3 "~" H 7750 5450 50  0001 C CNN
-	1    7750 5450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7500 5450 7550 5450
-Wire Wire Line
-	7500 5550 7550 5550
 $Sheet
 S 5850 5200 1650 950 
 U 5E1D8CD0
 F0 "CAN" 50
 F1 "CAN.sch" 50
 F2 "SODIMM_55" O L 5850 5500 50 
-F3 "SODIMM_63" I L 5850 5700 50 
-F4 "CAN_H" O R 7500 5450 50 
-F5 "CAN_L" O R 7500 5550 50 
+F3 "SODIMM_63" I L 5850 5800 50 
+F4 "CAN_H" O R 7500 5600 50 
+F5 "CAN_L" O R 7500 5700 50 
 $EndSheet
-Text GLabel 5800 5700 0    50   Input ~ 0
+Text GLabel 5800 5800 0    50   Input ~ 0
 SODIMM_63
+Wire Wire Line
+	10400 2950 10500 2950
+Wire Wire Line
+	10400 2850 10500 2850
+Text GLabel 6950 1500 2    50   Input ~ 0
+SODIMM_101
+Text GLabel 8650 3400 0    50   Input ~ 0
+SODIMM_101
+Text GLabel 8650 3600 0    50   Input ~ 0
+SODIMM_85
+Text GLabel 6950 1600 2    50   Input ~ 0
+SODIMM_85
+Wire Wire Line
+	6950 1500 6900 1500
+Wire Wire Line
+	6900 1600 6950 1600
+Wire Wire Line
+	6350 1400 6400 1400
+Wire Wire Line
+	8650 3000 8700 3000
+Wire Wire Line
+	8650 3200 8700 3200
+Wire Wire Line
+	8650 3400 8700 3400
+Wire Wire Line
+	8650 3600 8700 3600
+Text GLabel 8650 4650 0    50   Input ~ 0
+SODIMM_97
+Text GLabel 8650 4850 0    50   Input ~ 0
+SODIMM_79
+Text GLabel 6350 1600 0    50   Input ~ 0
+SODIMM_97
+Text GLabel 6350 1700 0    50   Input ~ 0
+SODIMM_79
+Wire Wire Line
+	6350 1600 6400 1600
+Wire Wire Line
+	6400 1700 6350 1700
+Wire Wire Line
+	8650 4250 8700 4250
+Wire Wire Line
+	8650 4450 8700 4450
+Wire Wire Line
+	8650 4650 8700 4650
+Wire Wire Line
+	8650 4850 8700 4850
+Wire Wire Line
+	10400 4350 10500 4350
+Wire Wire Line
+	10400 4450 10500 4450
+Wire Wire Line
+	10400 4200 10500 4200
+Wire Wire Line
+	10400 4100 10500 4100
+Wire Wire Line
+	10400 4600 10500 4600
+Wire Wire Line
+	10400 4700 10500 4700
+Wire Wire Line
+	10400 4950 10500 4950
+Wire Wire Line
+	10400 4850 10500 4850
+Wire Wire Line
+	10400 3350 10500 3350
+Wire Wire Line
+	10400 3450 10500 3450
+Wire Wire Line
+	10400 3600 10500 3600
+Wire Wire Line
+	10400 3700 10500 3700
+$Comp
+L Connector:Screw_Terminal_01x02 J?
+U 1 1 5E40BB37
+P 10700 1250
+F 0 "J?" H 10620 925 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 10620 1016 50  0000 C CNN
+F 2 "tdx-industrial-shield:CUI_TB007-508-02BE" H 10700 1250 50  0001 C CNN
+F 3 "https://www.cuidevices.com/product/resource/tb007-508.pdf" H 10700 1250 50  0001 C CNN
+	1    10700 1250
+	1    0    0    1   
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J?
+U 1 1 5E41F931
+P 10700 2150
+F 0 "J?" H 10620 1825 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 10620 1916 50  0000 C CNN
+F 2 "tdx-industrial-shield:CUI_TB007-508-02BE" H 10700 2150 50  0001 C CNN
+F 3 "https://www.cuidevices.com/product/resource/tb007-508.pdf" H 10700 2150 50  0001 C CNN
+	1    10700 2150
+	1    0    0    1   
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J?
+U 1 1 5E41FC1C
+P 10700 2950
+F 0 "J?" H 10620 2625 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 10620 2716 50  0000 C CNN
+F 2 "tdx-industrial-shield:CUI_TB007-508-02BE" H 10700 2950 50  0001 C CNN
+F 3 "https://www.cuidevices.com/product/resource/tb007-508.pdf" H 10700 2950 50  0001 C CNN
+	1    10700 2950
+	1    0    0    1   
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J?
+U 1 1 5E41FFA3
+P 10700 3200
+F 0 "J?" H 10620 2875 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 10620 2966 50  0000 C CNN
+F 2 "tdx-industrial-shield:CUI_TB007-508-02BE" H 10700 3200 50  0001 C CNN
+F 3 "https://www.cuidevices.com/product/resource/tb007-508.pdf" H 10700 3200 50  0001 C CNN
+	1    10700 3200
+	1    0    0    1   
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J?
+U 1 1 5E4202D5
+P 10700 3450
+F 0 "J?" H 10620 3125 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 10620 3216 50  0000 C CNN
+F 2 "tdx-industrial-shield:CUI_TB007-508-02BE" H 10700 3450 50  0001 C CNN
+F 3 "https://www.cuidevices.com/product/resource/tb007-508.pdf" H 10700 3450 50  0001 C CNN
+	1    10700 3450
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	10500 1150 10400 1150
+Wire Wire Line
+	10400 1250 10500 1250
+$Comp
+L Connector:Screw_Terminal_01x02 J?
+U 1 1 5E429FDB
+P 10700 3700
+F 0 "J?" H 10620 3375 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 10620 3466 50  0000 C CNN
+F 2 "tdx-industrial-shield:CUI_TB007-508-02BE" H 10700 3700 50  0001 C CNN
+F 3 "https://www.cuidevices.com/product/resource/tb007-508.pdf" H 10700 3700 50  0001 C CNN
+	1    10700 3700
+	1    0    0    1   
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J?
+U 1 1 5E42BBD7
+P 10700 4200
+F 0 "J?" H 10620 3875 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 10620 3966 50  0000 C CNN
+F 2 "tdx-industrial-shield:CUI_TB007-508-02BE" H 10700 4200 50  0001 C CNN
+F 3 "https://www.cuidevices.com/product/resource/tb007-508.pdf" H 10700 4200 50  0001 C CNN
+	1    10700 4200
+	1    0    0    1   
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J?
+U 1 1 5E42C05D
+P 10700 4450
+F 0 "J?" H 10620 4125 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 10620 4216 50  0000 C CNN
+F 2 "tdx-industrial-shield:CUI_TB007-508-02BE" H 10700 4450 50  0001 C CNN
+F 3 "https://www.cuidevices.com/product/resource/tb007-508.pdf" H 10700 4450 50  0001 C CNN
+	1    10700 4450
+	1    0    0    1   
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J?
+U 1 1 5E42C3FB
+P 10700 4700
+F 0 "J?" H 10620 4375 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 10620 4466 50  0000 C CNN
+F 2 "tdx-industrial-shield:CUI_TB007-508-02BE" H 10700 4700 50  0001 C CNN
+F 3 "https://www.cuidevices.com/product/resource/tb007-508.pdf" H 10700 4700 50  0001 C CNN
+	1    10700 4700
+	1    0    0    1   
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J?
+U 1 1 5E42C779
+P 10700 4950
+F 0 "J?" H 10620 4625 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 10620 4716 50  0000 C CNN
+F 2 "tdx-industrial-shield:CUI_TB007-508-02BE" H 10700 4950 50  0001 C CNN
+F 3 "https://www.cuidevices.com/product/resource/tb007-508.pdf" H 10700 4950 50  0001 C CNN
+	1    10700 4950
+	1    0    0    1   
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J?
+U 1 1 5E42CBB9
+P 10700 5600
+F 0 "J?" H 10620 5275 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 10620 5366 50  0000 C CNN
+F 2 "tdx-industrial-shield:CUI_TB007-508-02BE" H 10700 5600 50  0001 C CNN
+F 3 "https://www.cuidevices.com/product/resource/tb007-508.pdf" H 10700 5600 50  0001 C CNN
+	1    10700 5600
+	1    0    0    1   
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J?
+U 1 1 5E42CF5D
+P 10700 5850
+F 0 "J?" H 10620 5525 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 10620 5616 50  0000 C CNN
+F 2 "tdx-industrial-shield:CUI_TB007-508-02BE" H 10700 5850 50  0001 C CNN
+F 3 "https://www.cuidevices.com/product/resource/tb007-508.pdf" H 10700 5850 50  0001 C CNN
+	1    10700 5850
+	1    0    0    1   
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J?
+U 1 1 5E436774
+P 7750 5700
+F 0 "J?" H 7650 5150 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 7700 5200 50  0000 C CNN
+F 2 "tdx-industrial-shield:CUI_TB007-508-02BE" H 7750 5700 50  0001 C CNN
+F 3 "https://www.cuidevices.com/product/resource/tb007-508.pdf" H 7750 5700 50  0001 C CNN
+	1    7750 5700
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	7500 5600 7550 5600
+Wire Wire Line
+	7550 5700 7500 5700
+$Sheet
+S 8700 850  1700 700 
+U 5BB4156D
+F0 "MAX232" 50
+F1 "232.sch" 50
+F2 "UARTC_TX" I L 8700 1100 50 
+F3 "UARTC_RX" I L 8700 1300 50 
+F4 "RS232_TX" O R 10400 1150 50 
+F5 "RS232_RX" O R 10400 1250 50 
+$EndSheet
 $EndSCHEMATC

@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 7
+Sheet 3 7
 Title ""
 Date ""
 Rev ""
@@ -13,298 +13,566 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text GLabel 4800 3150 2    50   Input ~ 0
-GND_24V
-Wire Wire Line
-	4400 2900 4650 2900
+Text Notes 4700 5200 0    50   ~ 0
+TODO: 4 outs\nTODO: Opto 4 canais LTV-847
 $Comp
-L Device:D_Small D2
-U 1 1 5BB41CA6
-P 5250 2500
-F 0 "D2" V 5204 2568 50  0000 L CNN
-F 1 "D_Small" V 5295 2568 50  0000 L CNN
-F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5250 2500 50  0001 C CNN
-F 3 "~" V 5250 2500 50  0001 C CNN
-	1    5250 2500
+L Isolator:LTV-847 U1
+U 1 1 5E1AF440
+P 2300 1600
+F 0 "U1" H 2300 1925 50  0000 C CNN
+F 1 "LTV-847" H 2300 1834 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 2100 1400 50  0001 L CIN
+F 3 "https://br.mouser.com/datasheet/2/239/LTV-8X7_series_201610_-1544776.pdf" H 2300 1500 50  0001 L CNN
+	1    2300 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 1500 2000 1500
+$Comp
+L power:GND #PWR0131
+U 1 1 5E198BDC
+P 1700 1800
+F 0 "#PWR0131" H 1700 1550 50  0001 C CNN
+F 1 "GND" H 1705 1627 50  0000 C CNN
+F 2 "" H 1700 1800 50  0001 C CNN
+F 3 "" H 1700 1800 50  0001 C CNN
+	1    1700 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 1700 1700 1800
+Wire Wire Line
+	1750 1700 1700 1700
+Wire Wire Line
+	1950 1700 2000 1700
+$Comp
+L power:+24V #PWR0116
+U 1 1 5BB41712
+P 2800 1050
+F 0 "#PWR0116" H 2800 900 50  0001 C CNN
+F 1 "+24V" H 2815 1223 50  0000 C CNN
+F 2 "" H 2800 1050 50  0001 C CNN
+F 3 "" H 2800 1050 50  0001 C CNN
+	1    2800 1050
+	1    0    0    -1  
+$EndComp
+Text HLabel 4300 1500 2    50   Input ~ 0
+Out1B
+Text HLabel 4300 1100 2    50   Input ~ 0
+Out1A
+Text HLabel 1650 1500 0    50   Input ~ 0
+GPIO1
+$Comp
+L Device:R_Small R2
+U 1 1 5BB44992
+P 1850 1700
+F 0 "R2" V 1654 1700 50  0000 C CNN
+F 1 "330R" V 1745 1700 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1850 1700 50  0001 C CNN
+F 3 "~" H 1850 1700 50  0001 C CNN
+	1    1850 1700
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Polyfuse_Small F5
+U 1 1 5BB42BCF
+P 4100 1500
+F 0 "F5" V 4200 1500 50  0000 C CNN
+F 1 "Polyfuse_Small" V 4300 1550 50  0000 C CNN
+F 2 "" H 4150 1300 50  0001 L CNN
+F 3 "~" H 4100 1500 50  0001 C CNN
+	1    4100 1500
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:Polyfuse_Small F4
 U 1 1 5BB41F4D
-P 7100 2250
-F 0 "F4" V 6895 2250 50  0000 C CNN
-F 1 "Polyfuse_Small" V 6986 2250 50  0000 C CNN
-F 2 "" H 7150 2050 50  0001 L CNN
-F 3 "~" H 7100 2250 50  0001 C CNN
-	1    7100 2250
+P 4100 1100
+F 0 "F4" V 3895 1100 50  0000 C CNN
+F 1 "Polyfuse_Small" V 4000 1150 50  0000 C CNN
+F 2 "" H 4150 900 50  0001 L CNN
+F 3 "~" H 4100 1100 50  0001 C CNN
+	1    4100 1100
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	7200 2250 7400 2250
 $Comp
-L Device:Polyfuse_Small F5
-U 1 1 5BB42BCF
-P 7100 2650
-F 0 "F5" V 6895 2650 50  0000 C CNN
-F 1 "Polyfuse_Small" V 6986 2650 50  0000 C CNN
-F 2 "" H 7150 2450 50  0001 L CNN
-F 3 "~" H 7100 2650 50  0001 C CNN
-	1    7100 2650
+L Device:D_Small D2
+U 1 1 5BB41CA6
+P 2800 1300
+F 0 "D2" V 2754 1368 50  0000 L CNN
+F 1 "D_Small" V 2845 1368 50  0000 L CNN
+F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2800 1300 50  0001 C CNN
+F 3 "~" V 2800 1300 50  0001 C CNN
+	1    2800 1300
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	7200 2650 7400 2650
-$Comp
-L Device:R_Small R2
-U 1 1 5BB44992
-P 3650 2900
-F 0 "R2" V 3454 2900 50  0000 C CNN
-F 1 "330R" V 3545 2900 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3650 2900 50  0001 C CNN
-F 3 "~" H 3650 2900 50  0001 C CNN
-	1    3650 2900
-	0    1    1    0   
-$EndComp
-Text HLabel 3450 2700 0    50   Input ~ 0
-GPIO1
-Text HLabel 7400 2250 2    50   Input ~ 0
-Out1A
-Text HLabel 7400 2650 2    50   Input ~ 0
-Out1B
-$Comp
-L Relay:G5Q-1A K1
-U 1 1 5E13C15B
-P 6250 2450
-F 0 "K1" H 5820 2404 50  0000 R CNN
-F 1 "G5Q-1A" H 5820 2495 50  0000 R CNN
-F 2 "Relay_THT:Relay_SPST_Omron-G5Q-1A" H 6600 2400 50  0001 L CNN
-F 3 "https://www.omron.com/ecb/products/pdf/en-g5q.pdf" H 6250 2450 50  0001 C CNN
-	1    6250 2450
-	1    0    0    1   
-$EndComp
-Wire Wire Line
-	6450 2150 6750 2150
-Wire Wire Line
-	6750 2150 6750 2250
-Wire Wire Line
-	6750 2250 7000 2250
-Wire Wire Line
-	6750 2750 6750 2650
-Wire Wire Line
-	6750 2650 7000 2650
-Wire Wire Line
-	6450 2750 6750 2750
-Wire Wire Line
-	4650 3150 4800 3150
-Wire Wire Line
-	4650 2900 4650 3150
-Wire Wire Line
-	5250 2600 5250 2750
-Wire Wire Line
-	5250 2750 6050 2750
-$Comp
-L power:+24V #PWR0116
-U 1 1 5BB41712
-P 5000 2050
-F 0 "#PWR0116" H 5000 1900 50  0001 C CNN
-F 1 "+24V" H 5015 2223 50  0000 C CNN
-F 2 "" H 5000 2050 50  0001 C CNN
-F 3 "" H 5000 2050 50  0001 C CNN
-	1    5000 2050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3750 2900 3800 2900
-Wire Wire Line
-	3550 2900 3500 2900
-Wire Wire Line
-	3500 2900 3500 3000
-$Comp
-L power:GND #PWR0131
-U 1 1 5E198BDC
-P 3500 3000
-F 0 "#PWR0131" H 3500 2750 50  0001 C CNN
-F 1 "GND" H 3505 2827 50  0000 C CNN
-F 2 "" H 3500 3000 50  0001 C CNN
-F 3 "" H 3500 3000 50  0001 C CNN
-	1    3500 3000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3450 2700 3800 2700
-Wire Wire Line
-	6050 2150 5250 2150
-Wire Wire Line
-	5000 2150 5000 2050
-Wire Wire Line
-	5250 2400 5250 2150
-Connection ~ 5250 2150
-Wire Wire Line
-	5250 2150 5000 2150
-Connection ~ 5250 2750
-Text GLabel 4800 4750 2    50   Input ~ 0
+Text GLabel 2750 1700 2    50   Input ~ 0
 GND_24V
-Wire Wire Line
-	4400 4500 4650 4500
 $Comp
-L Device:D_Small D9
-U 1 1 5E1A3097
-P 5250 4100
-F 0 "D9" V 5204 4168 50  0000 L CNN
-F 1 "D_Small" V 5295 4168 50  0000 L CNN
-F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5250 4100 50  0001 C CNN
-F 3 "~" V 5250 4100 50  0001 C CNN
-	1    5250 4100
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:Polyfuse_Small F6
-U 1 1 5E1A309D
-P 7100 3850
-F 0 "F6" V 6895 3850 50  0000 C CNN
-F 1 "Polyfuse_Small" V 6986 3850 50  0000 C CNN
-F 2 "" H 7150 3650 50  0001 L CNN
-F 3 "~" H 7100 3850 50  0001 C CNN
-	1    7100 3850
-	0    1    1    0   
+L tdx-industrial-shield:G3VM-61VY3(TR) U?
+U 1 1 5E442762
+P 3450 1000
+F 0 "U?" H 3500 975 50  0000 C CNN
+F 1 "G3VM-61VY3(TR)" H 3500 884 50  0000 C CNN
+F 2 "tdx-industrial-shield:SOP127P695X210-4N" H 3300 1050 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/307/omron_04102018_G3VM-6_G__61VY1_DS_E-1317117.pdf" H 3450 950 50  0001 C CNN
+	1    3450 1000
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7200 3850 7400 3850
+	2600 1500 2800 1500
+Wire Wire Line
+	2800 1500 2800 1400
+Wire Wire Line
+	2600 1700 2750 1700
+Wire Wire Line
+	2800 1200 2800 1150
+Wire Wire Line
+	2800 1150 3250 1150
+Wire Wire Line
+	3250 1150 3250 1250
+Connection ~ 2800 1150
+Wire Wire Line
+	2800 1150 2800 1050
+Wire Wire Line
+	2800 1500 3250 1500
+Wire Wire Line
+	3250 1500 3250 1350
+Connection ~ 2800 1500
+Wire Wire Line
+	3750 1250 3950 1250
+Wire Wire Line
+	3950 1250 3950 1100
+Wire Wire Line
+	3950 1100 4000 1100
+Wire Wire Line
+	3750 1350 3950 1350
+Wire Wire Line
+	3950 1350 3950 1500
+Wire Wire Line
+	3950 1500 4000 1500
+Wire Wire Line
+	4200 1100 4300 1100
+Wire Wire Line
+	4200 1500 4300 1500
+Wire Wire Line
+	4200 5000 4300 5000
+Wire Wire Line
+	4200 4600 4300 4600
+Wire Wire Line
+	3950 5000 4000 5000
+Wire Wire Line
+	3950 4850 3950 5000
+Wire Wire Line
+	3750 4850 3950 4850
+Wire Wire Line
+	3950 4600 4000 4600
+Wire Wire Line
+	3950 4750 3950 4600
+Wire Wire Line
+	3750 4750 3950 4750
+Connection ~ 2800 5000
+Wire Wire Line
+	3250 5000 3250 4850
+Wire Wire Line
+	2800 5000 3250 5000
+Wire Wire Line
+	2800 4650 2800 4550
+Connection ~ 2800 4650
+Wire Wire Line
+	3250 4650 3250 4750
+Wire Wire Line
+	2800 4650 3250 4650
+Wire Wire Line
+	2800 4700 2800 4650
+Wire Wire Line
+	2600 5200 2750 5200
+Wire Wire Line
+	2800 5000 2800 4900
+Wire Wire Line
+	2600 5000 2800 5000
 $Comp
-L Device:Polyfuse_Small F7
-U 1 1 5E1A30A4
-P 7100 4250
-F 0 "F7" V 6895 4250 50  0000 C CNN
-F 1 "Polyfuse_Small" V 6986 4250 50  0000 C CNN
-F 2 "" H 7150 4050 50  0001 L CNN
-F 3 "~" H 7100 4250 50  0001 C CNN
-	1    7100 4250
+L tdx-industrial-shield:G3VM-61VY3(TR) U?
+U 1 1 5E1B1E13
+P 3450 4500
+F 0 "U?" H 3500 4475 50  0000 C CNN
+F 1 "G3VM-61VY3(TR)" H 3500 4384 50  0000 C CNN
+F 2 "tdx-industrial-shield:SOP127P695X210-4N" H 3300 4550 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/307/omron_04102018_G3VM-6_G__61VY1_DS_E-1317117.pdf" H 3450 4450 50  0001 C CNN
+	1    3450 4500
+	1    0    0    -1  
+$EndComp
+Text GLabel 2750 5200 2    50   Input ~ 0
+GND_24V
+$Comp
+L Device:D_Small D?
+U 1 1 5E1B1E0C
+P 2800 4800
+F 0 "D?" V 2754 4868 50  0000 L CNN
+F 1 "D_Small" V 2845 4868 50  0000 L CNN
+F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2800 4800 50  0001 C CNN
+F 3 "~" V 2800 4800 50  0001 C CNN
+	1    2800 4800
 	0    1    1    0   
+$EndComp
+$Comp
+L Device:Polyfuse_Small F?
+U 1 1 5E1B1E06
+P 4100 4600
+F 0 "F?" V 3895 4600 50  0000 C CNN
+F 1 "Polyfuse_Small" V 4000 4650 50  0000 C CNN
+F 2 "" H 4150 4400 50  0001 L CNN
+F 3 "~" H 4100 4600 50  0001 C CNN
+	1    4100 4600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Polyfuse_Small F?
+U 1 1 5E1B1E00
+P 4100 5000
+F 0 "F?" V 4200 5000 50  0000 C CNN
+F 1 "Polyfuse_Small" V 4300 5050 50  0000 C CNN
+F 2 "" H 4150 4800 50  0001 L CNN
+F 3 "~" H 4100 5000 50  0001 C CNN
+	1    4100 5000
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5E1B1DFA
+P 1850 5200
+F 0 "R?" V 1654 5200 50  0000 C CNN
+F 1 "330R" V 1745 5200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1850 5200 50  0001 C CNN
+F 3 "~" H 1850 5200 50  0001 C CNN
+	1    1850 5200
+	0    1    1    0   
+$EndComp
+Text HLabel 1650 5000 0    50   Input ~ 0
+GPIO4
+Text HLabel 4300 4600 2    50   Input ~ 0
+Out4A
+Text HLabel 4300 5000 2    50   Input ~ 0
+Out4B
+$Comp
+L power:+24V #PWR?
+U 1 1 5E1B1DF1
+P 2800 4550
+F 0 "#PWR?" H 2800 4400 50  0001 C CNN
+F 1 "+24V" H 2815 4723 50  0000 C CNN
+F 2 "" H 2800 4550 50  0001 C CNN
+F 3 "" H 2800 4550 50  0001 C CNN
+	1    2800 4550
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7200 4250 7400 4250
+	1950 5200 2000 5200
+Wire Wire Line
+	1750 5200 1700 5200
+Wire Wire Line
+	1700 5200 1700 5300
 $Comp
-L Device:R_Small R1
-U 1 1 5E1A30AB
-P 3650 4500
-F 0 "R1" V 3454 4500 50  0000 C CNN
-F 1 "330R" V 3545 4500 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3650 4500 50  0001 C CNN
-F 3 "~" H 3650 4500 50  0001 C CNN
-	1    3650 4500
+L power:GND #PWR?
+U 1 1 5E1B1DE8
+P 1700 5300
+F 0 "#PWR?" H 1700 5050 50  0001 C CNN
+F 1 "GND" H 1705 5127 50  0000 C CNN
+F 2 "" H 1700 5300 50  0001 C CNN
+F 3 "" H 1700 5300 50  0001 C CNN
+	1    1700 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 5000 2000 5000
+$Comp
+L Isolator:LTV-847 U?
+U 1 1 5E1B1DE1
+P 2300 5100
+F 0 "U?" H 2300 5425 50  0000 C CNN
+F 1 "LTV-847" H 2300 5334 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 2100 4900 50  0001 L CIN
+F 3 "https://br.mouser.com/datasheet/2/239/LTV-8X7_series_201610_-1544776.pdf" H 2300 5000 50  0001 L CNN
+	1    2300 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 3800 4300 3800
+Wire Wire Line
+	4200 3400 4300 3400
+Wire Wire Line
+	3950 3800 4000 3800
+Wire Wire Line
+	3950 3650 3950 3800
+Wire Wire Line
+	3750 3650 3950 3650
+Wire Wire Line
+	3950 3400 4000 3400
+Wire Wire Line
+	3950 3550 3950 3400
+Wire Wire Line
+	3750 3550 3950 3550
+Connection ~ 2800 3800
+Wire Wire Line
+	3250 3800 3250 3650
+Wire Wire Line
+	2800 3800 3250 3800
+Wire Wire Line
+	2800 3450 2800 3350
+Connection ~ 2800 3450
+Wire Wire Line
+	3250 3450 3250 3550
+Wire Wire Line
+	2800 3450 3250 3450
+Wire Wire Line
+	2800 3500 2800 3450
+Wire Wire Line
+	2600 4000 2750 4000
+Wire Wire Line
+	2800 3800 2800 3700
+Wire Wire Line
+	2600 3800 2800 3800
+$Comp
+L tdx-industrial-shield:G3VM-61VY3(TR) U?
+U 1 1 5E1B1DC8
+P 3450 3300
+F 0 "U?" H 3500 3275 50  0000 C CNN
+F 1 "G3VM-61VY3(TR)" H 3500 3184 50  0000 C CNN
+F 2 "tdx-industrial-shield:SOP127P695X210-4N" H 3300 3350 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/307/omron_04102018_G3VM-6_G__61VY1_DS_E-1317117.pdf" H 3450 3250 50  0001 C CNN
+	1    3450 3300
+	1    0    0    -1  
+$EndComp
+Text GLabel 2750 4000 2    50   Input ~ 0
+GND_24V
+$Comp
+L Device:D_Small D?
+U 1 1 5E1B1DC1
+P 2800 3600
+F 0 "D?" V 2754 3668 50  0000 L CNN
+F 1 "D_Small" V 2845 3668 50  0000 L CNN
+F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2800 3600 50  0001 C CNN
+F 3 "~" V 2800 3600 50  0001 C CNN
+	1    2800 3600
 	0    1    1    0   
 $EndComp
-Text HLabel 3450 4300 0    50   Input ~ 0
+$Comp
+L Device:Polyfuse_Small F?
+U 1 1 5E1B1DBB
+P 4100 3400
+F 0 "F?" V 3895 3400 50  0000 C CNN
+F 1 "Polyfuse_Small" V 4000 3450 50  0000 C CNN
+F 2 "" H 4150 3200 50  0001 L CNN
+F 3 "~" H 4100 3400 50  0001 C CNN
+	1    4100 3400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Polyfuse_Small F?
+U 1 1 5E1B1DB5
+P 4100 3800
+F 0 "F?" V 4200 3800 50  0000 C CNN
+F 1 "Polyfuse_Small" V 4300 3850 50  0000 C CNN
+F 2 "" H 4150 3600 50  0001 L CNN
+F 3 "~" H 4100 3800 50  0001 C CNN
+	1    4100 3800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5E1B1DAF
+P 1850 4000
+F 0 "R?" V 1654 4000 50  0000 C CNN
+F 1 "330R" V 1745 4000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1850 4000 50  0001 C CNN
+F 3 "~" H 1850 4000 50  0001 C CNN
+	1    1850 4000
+	0    1    1    0   
+$EndComp
+Text HLabel 1650 3800 0    50   Input ~ 0
+GPIO3
+Text HLabel 4300 3400 2    50   Input ~ 0
+Out3A
+Text HLabel 4300 3800 2    50   Input ~ 0
+Out3B
+$Comp
+L power:+24V #PWR?
+U 1 1 5E1B1DA6
+P 2800 3350
+F 0 "#PWR?" H 2800 3200 50  0001 C CNN
+F 1 "+24V" H 2815 3523 50  0000 C CNN
+F 2 "" H 2800 3350 50  0001 C CNN
+F 3 "" H 2800 3350 50  0001 C CNN
+	1    2800 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 4000 2000 4000
+Wire Wire Line
+	1750 4000 1700 4000
+Wire Wire Line
+	1700 4000 1700 4100
+$Comp
+L power:GND #PWR?
+U 1 1 5E1B1D9D
+P 1700 4100
+F 0 "#PWR?" H 1700 3850 50  0001 C CNN
+F 1 "GND" H 1705 3927 50  0000 C CNN
+F 2 "" H 1700 4100 50  0001 C CNN
+F 3 "" H 1700 4100 50  0001 C CNN
+	1    1700 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 3800 2000 3800
+$Comp
+L Isolator:LTV-847 U?
+U 1 1 5E1B1D96
+P 2300 3900
+F 0 "U?" H 2300 4225 50  0000 C CNN
+F 1 "LTV-847" H 2300 4134 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 2100 3700 50  0001 L CIN
+F 3 "https://br.mouser.com/datasheet/2/239/LTV-8X7_series_201610_-1544776.pdf" H 2300 3800 50  0001 L CNN
+	1    2300 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 2650 4300 2650
+Wire Wire Line
+	4200 2250 4300 2250
+Wire Wire Line
+	3950 2650 4000 2650
+Wire Wire Line
+	3950 2500 3950 2650
+Wire Wire Line
+	3750 2500 3950 2500
+Wire Wire Line
+	3950 2250 4000 2250
+Wire Wire Line
+	3950 2400 3950 2250
+Wire Wire Line
+	3750 2400 3950 2400
+Connection ~ 2800 2650
+Wire Wire Line
+	3250 2650 3250 2500
+Wire Wire Line
+	2800 2650 3250 2650
+Wire Wire Line
+	2800 2300 2800 2200
+Connection ~ 2800 2300
+Wire Wire Line
+	3250 2300 3250 2400
+Wire Wire Line
+	2800 2300 3250 2300
+Wire Wire Line
+	2800 2350 2800 2300
+Wire Wire Line
+	2600 2850 2750 2850
+Wire Wire Line
+	2800 2650 2800 2550
+Wire Wire Line
+	2600 2650 2800 2650
+$Comp
+L tdx-industrial-shield:G3VM-61VY3(TR) U?
+U 1 1 5E1A7D70
+P 3450 2150
+F 0 "U?" H 3500 2125 50  0000 C CNN
+F 1 "G3VM-61VY3(TR)" H 3500 2034 50  0000 C CNN
+F 2 "tdx-industrial-shield:SOP127P695X210-4N" H 3300 2200 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/307/omron_04102018_G3VM-6_G__61VY1_DS_E-1317117.pdf" H 3450 2100 50  0001 C CNN
+	1    3450 2150
+	1    0    0    -1  
+$EndComp
+Text GLabel 2750 2850 2    50   Input ~ 0
+GND_24V
+$Comp
+L Device:D_Small D?
+U 1 1 5E1A7D69
+P 2800 2450
+F 0 "D?" V 2754 2518 50  0000 L CNN
+F 1 "D_Small" V 2845 2518 50  0000 L CNN
+F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2800 2450 50  0001 C CNN
+F 3 "~" V 2800 2450 50  0001 C CNN
+	1    2800 2450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Polyfuse_Small F?
+U 1 1 5E1A7D63
+P 4100 2250
+F 0 "F?" V 3895 2250 50  0000 C CNN
+F 1 "Polyfuse_Small" V 4000 2300 50  0000 C CNN
+F 2 "" H 4150 2050 50  0001 L CNN
+F 3 "~" H 4100 2250 50  0001 C CNN
+	1    4100 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Polyfuse_Small F?
+U 1 1 5E1A7D5D
+P 4100 2650
+F 0 "F?" V 4200 2650 50  0000 C CNN
+F 1 "Polyfuse_Small" V 4300 2700 50  0000 C CNN
+F 2 "" H 4150 2450 50  0001 L CNN
+F 3 "~" H 4100 2650 50  0001 C CNN
+	1    4100 2650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5E1A7D57
+P 1850 2850
+F 0 "R?" V 1654 2850 50  0000 C CNN
+F 1 "330R" V 1745 2850 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1850 2850 50  0001 C CNN
+F 3 "~" H 1850 2850 50  0001 C CNN
+	1    1850 2850
+	0    1    1    0   
+$EndComp
+Text HLabel 1650 2650 0    50   Input ~ 0
 GPIO2
-Text HLabel 7400 3850 2    50   Input ~ 0
+Text HLabel 4300 2250 2    50   Input ~ 0
 Out2A
-Text HLabel 7400 4250 2    50   Input ~ 0
+Text HLabel 4300 2650 2    50   Input ~ 0
 Out2B
 $Comp
-L Relay:G5Q-1A K2
-U 1 1 5E1A30B4
-P 6250 4050
-F 0 "K2" H 5820 4004 50  0000 R CNN
-F 1 "G5Q-1A" H 5820 4095 50  0000 R CNN
-F 2 "Relay_THT:Relay_SPST_Omron-G5Q-1A" H 6600 4000 50  0001 L CNN
-F 3 "https://www.omron.com/ecb/products/pdf/en-g5q.pdf" H 6250 4050 50  0001 C CNN
-	1    6250 4050
-	1    0    0    1   
-$EndComp
-Wire Wire Line
-	6450 3750 6750 3750
-Wire Wire Line
-	6750 3750 6750 3850
-Wire Wire Line
-	6750 3850 7000 3850
-Wire Wire Line
-	6750 4350 6750 4250
-Wire Wire Line
-	6750 4250 7000 4250
-Wire Wire Line
-	6450 4350 6750 4350
-Wire Wire Line
-	4650 4750 4800 4750
-Wire Wire Line
-	4650 4500 4650 4750
-Wire Wire Line
-	5250 4200 5250 4350
-Wire Wire Line
-	5250 4350 6050 4350
-$Comp
-L power:+24V #PWR0132
-U 1 1 5E1A30C5
-P 5000 3650
-F 0 "#PWR0132" H 5000 3500 50  0001 C CNN
-F 1 "+24V" H 5015 3823 50  0000 C CNN
-F 2 "" H 5000 3650 50  0001 C CNN
-F 3 "" H 5000 3650 50  0001 C CNN
-	1    5000 3650
+L power:+24V #PWR?
+U 1 1 5E1A7D4E
+P 2800 2200
+F 0 "#PWR?" H 2800 2050 50  0001 C CNN
+F 1 "+24V" H 2815 2373 50  0000 C CNN
+F 2 "" H 2800 2200 50  0001 C CNN
+F 3 "" H 2800 2200 50  0001 C CNN
+	1    2800 2200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3750 4500 3800 4500
+	1950 2850 2000 2850
 Wire Wire Line
-	3550 4500 3500 4500
+	1750 2850 1700 2850
 Wire Wire Line
-	3500 4500 3500 4600
+	1700 2850 1700 2950
 $Comp
-L power:GND #PWR0135
-U 1 1 5E1A30CE
-P 3500 4600
-F 0 "#PWR0135" H 3500 4350 50  0001 C CNN
-F 1 "GND" H 3505 4427 50  0000 C CNN
-F 2 "" H 3500 4600 50  0001 C CNN
-F 3 "" H 3500 4600 50  0001 C CNN
-	1    3500 4600
+L power:GND #PWR?
+U 1 1 5E1A7D45
+P 1700 2950
+F 0 "#PWR?" H 1700 2700 50  0001 C CNN
+F 1 "GND" H 1705 2777 50  0000 C CNN
+F 2 "" H 1700 2950 50  0001 C CNN
+F 3 "" H 1700 2950 50  0001 C CNN
+	1    1700 2950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3450 4300 3800 4300
-Wire Wire Line
-	6050 3750 5250 3750
-Wire Wire Line
-	5000 3750 5000 3650
-Wire Wire Line
-	5250 4000 5250 3750
-Connection ~ 5250 3750
-Wire Wire Line
-	5250 3750 5000 3750
-Wire Wire Line
-	5250 4350 5050 4350
-Connection ~ 5250 4350
+	1650 2650 2000 2650
 $Comp
-L Isolator:LTV-817 U?
-U 1 1 5E1AF440
-P 4100 2800
-F 0 "U?" H 4100 3125 50  0000 C CNN
-F 1 "LTV-817" H 4100 3034 50  0000 C CNN
-F 2 "Package_DIP:DIP-4_W7.62mm" H 3900 2600 50  0001 L CIN
-F 3 "http://www.us.liteon.com/downloads/LTV-817-827-847.PDF" H 4100 2700 50  0001 L CNN
-	1    4100 2800
+L Isolator:LTV-847 U?
+U 1 1 5E1A7D3E
+P 2300 2750
+F 0 "U?" H 2300 3075 50  0000 C CNN
+F 1 "LTV-847" H 2300 2984 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 2100 2550 50  0001 L CIN
+F 3 "https://br.mouser.com/datasheet/2/239/LTV-8X7_series_201610_-1544776.pdf" H 2300 2650 50  0001 L CNN
+	1    2300 2750
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4500 2750 4500 2700
-Wire Wire Line
-	4500 2700 4400 2700
-Wire Wire Line
-	4500 2750 5250 2750
-$Comp
-L Isolator:LTV-817 U?
-U 1 1 5E1B5D3C
-P 4100 4400
-F 0 "U?" H 4100 4725 50  0000 C CNN
-F 1 "LTV-817" H 4100 4634 50  0000 C CNN
-F 2 "Package_DIP:SMDIP-4_W9.53mm" H 3900 4200 50  0001 L CIN
-F 3 "http://www.us.liteon.com/downloads/LTV-817-827-847.PDF" H 4100 4300 50  0001 L CNN
-	1    4100 4400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4400 4300 5050 4300
-Wire Wire Line
-	5050 4300 5050 4350
-Text Notes 5750 5000 0    50   ~ 0
-TODO: 4 outs\nTODO: Opto 4 canais LTV-847
 $EndSCHEMATC
